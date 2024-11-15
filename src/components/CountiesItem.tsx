@@ -8,6 +8,8 @@ const CountiesItem:React.FC<{item:CountryType}> = ({item}) => {
         // const findedData = counties.find(item => item.name = id);
         const updatedCounties = counties.map((item) => item.name === id ? { ...item, isLike: !item.isLike } : item);
         setCounties(updatedCounties);
+        console.log(updatedCounties);
+        
     }
     function handleSave(id:string):void{
         const updatedCounties = counties.map((item) => item.name === id? {...item, isSave:!item.isSave } : item);
